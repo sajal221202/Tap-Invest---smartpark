@@ -1,9 +1,10 @@
+
 import React from 'react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { MapPin, Star, Car, Clock, Navigation } from 'lucide-react';
+import { MapPin, Star, Car, Navigation } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { ParkingSpot } from '@/data/parkingData';
 
@@ -31,7 +32,7 @@ const ParkingCardSkeleton = () => (
 );
 
 export const ParkingCard = ({ spot, onNavigate, index }: ParkingCardProps) => {
-  const { elementRef, isVisible, hasBeenVisible } = useIntersectionObserver({
+  const { elementRef, hasBeenVisible } = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '50px',
     freezeOnceVisible: true,
@@ -60,7 +61,7 @@ export const ParkingCard = ({ spot, onNavigate, index }: ParkingCardProps) => {
   };
 
   return (
-    <div ref={elementRef} className="h-fit">
+    <div ref={elementRef as React.RefObject<HTMLDivElement>} className="h-fit">
       {!hasBeenVisible ? (
         <ParkingCardSkeleton />
       ) : (

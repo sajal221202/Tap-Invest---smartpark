@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Map, MapPin, Navigation, Maximize2 } from 'lucide-react';
+import { Map, Navigation, Maximize2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { mockParkingData } from '@/data/parkingData';
 import type { ParkingSpot } from '@/data/parkingData';

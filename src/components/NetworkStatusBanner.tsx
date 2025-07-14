@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { useNetworkStatus } from '@/hooks/useNetworkStatus';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Wifi, WifiOff, AlertTriangle } from 'lucide-react';
+import { WifiOff, AlertTriangle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const NetworkStatusBanner = () => {

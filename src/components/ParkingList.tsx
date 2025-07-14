@@ -1,10 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { ParkingCard } from './ParkingCard';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { mockParkingData } from '@/data/parkingData';
 import type { ParkingSpot } from '@/data/parkingData';
-import { Search, Filter, SortAsc } from 'lucide-react';
+import { Search, SortAsc } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface ParkingListProps {
@@ -13,7 +12,7 @@ interface ParkingListProps {
 
 type SortOption = 'distance' | 'price' | 'availability' | 'rating';
 
-export const ParkingList = ({ userLocation }: ParkingListProps) => {
+export const ParkingList = ({ }: ParkingListProps) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<SortOption>('distance');
   const [showOnlyAvailable, setShowOnlyAvailable] = useState(false);

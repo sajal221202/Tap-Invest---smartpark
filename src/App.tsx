@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { LocationTracker } from './components/LocationTracker';
 import { NetworkStatusBanner } from './components/NetworkStatusBanner';
 import { ParkingList } from './components/ParkingList';
@@ -16,10 +16,7 @@ function App() {
     setUserLocation({ lat, lng });
   };
 
-  const handleSpotSelect = (spot: ParkingSpot) => {
-    setSelectedSpot(spot);
-    setActiveView('map'); // Switch to map view when spot is selected
-  };
+
 
   return (
     <div className="min-h-screen bg-gray-50">
